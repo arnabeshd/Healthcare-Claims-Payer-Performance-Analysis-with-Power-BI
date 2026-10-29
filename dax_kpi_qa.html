@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .minimal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 0.95rem;
+            color: #222;
+                }
+
+        .minimal-table th,
+        .minimal-table td {
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        .minimal-table th {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            color: #666;
+            border-bottom: 2px solid #eaeaea;
+        }
+
+        .minimal-table tbody tr {
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.15s ease;
+        }
+
+        .minimal-table tbody tr:hover{
+            background-color: #fafafa;
+        }
+
+        .minimal-table td {
+            font-weight: 400;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .pages {
+            font-weight: 600;
+            text-transform: uppercase;
+            background-color: #eaeaea;
+        }
+
+	.qa{
+		border-left: 1px solid #eaeaea;
+		}
+
+    </style>
+</head>
+<body>
+    <table class="minimal-table">
+        <thead>
+            <tr>
+                <th>KPI</th>
+                <th>Visuals</th>
+                <th>Question</th>
+            </tr>   
+        </thead>
+        <tbody>
+            <!-- Claims Overview -->
+            <tr> 
+                <td class="pages" colspan = "3">Claims Overview</td>
+            </tr>
+            <tr>
+                <td>Total Claim Volume</td>
+                <td>Card</td>
+                <td rowspan="5" class="qa">Which payer has the highest claim volume and whether there is a trend (increasing/decreasing) or the value has increased/decreased from previous year?</td>
+            </tr>
+            <tr>
+                <td>Claim cost</td>
+                <td>Card</td>
+                
+            </tr>
+            <tr>
+                <td>Patient OOP Expenses</td>
+                <td>Card</td>
+                
+            </tr>
+            <tr>
+                <td>Payer Contribution %</td>
+                <td>Card</td>
+                
+            </tr>
+            <tr>
+                <td>Year-on-Year (YOY) %</td>
+                <td>Card</td>
+                
+            </tr>
+            <tr>
+                <td>Claim cost & YOY% by Year > Month</td>
+                <td>Line Graph</td>
+                <td class="qa">If the Payers reported any trend (increasing/decreasing) in Claims amount over the years? (Actual Amount and YOY% as a measure for growth or decline)</td>
+            </tr>
+	    <tr>
+                <td>Average claim cost & Average Patient OOP by Encounter Class</td>
+                <td>Clustered Column</td>
+                <td class="qa">How are average claim cost and Patient Out-of-Pocket expenses distributed across different encounter classes?</td>
+            </tr>
+            <!-- Payer Performance -->
+	     <tr> 
+                <td class="pages" colspan = "3">Payer Performance</td>
+            </tr>
+            <tr>
+                <td>Total Claims</td>
+                <td>Card</td>
+                <td rowspan="5" class="qa">Which payer has the highest contribution and retention rate? </td>
+            </tr>
+            <tr>
+                <td>Claim Cost</td>
+                <td>Card</td>
+                
+            </tr>
+            <tr>
+                <td>Prior Year Claim Cost</td>
+                <td>Card</td>
+                
+            </tr>
+            <tr>
+                <td>Payer Liability</td>
+                <td>Card</td>
+                
+            </tr>
+            <tr>
+                <td>Payer Contribution %</td>
+                <td>Card</td>
+                
+            </tr>
+            <tr>
+                <td>Patient's Choice in Payers by Encounter classes</td>
+                <td>100% stacked Bar Chart</td>
+                <td class="qa">How does the distribution of Encounter categories look like among different Payers and which one have highest payer contribution?</td>
+            </tr>
+            <tr>
+                <td>Payer Liability & Patient Retention by Year > Month</td>
+                <td>Line</td>
+                <td class="qa">Is there any trend between payer liability and retention rate % over the years?</td>
+            </tr>
+            <tr>
+                <td>Payer contribution % vs Encounter class</td>
+                <td>Pie Chart</td>
+                <td class="qa">Which encounter type drives cost have the highest payer contribution?</td>
+            </tr>
+            <tr>
+                <td>Payer Contribution % vs Age Group</td>
+                <td>Pie Chart</td>
+                <td class="qa">How does the payer contribution varies across different Age Groups?	</td>
+            </tr>
+             <!-- Patient Transition -->
+              <tr> 
+                <td class="pages" colspan = "3">Patient Transition</td>
+            </tr>
+            <tr>
+                <td>Total Transitions</td>
+                <td>Card</td>
+                <td rowspan="3" class="qa">Which Payer lost or gained most patients?</td>
+            </tr>
+            <tr>
+                <td>Payer Retention Rate % </td>
+                <td>Card</td>
+                
+            </tr>
+            <tr>
+                <td>New Customer Aquisitions</td>
+                <td>Clustered Column Chart</td>
+            </tr>
+            <tr>
+                <td>Average Membership Tenure</td>
+                <td>Card</td>
+                <td class="qa">How does the patients' membership tenure indicates if they prefer to stay with a particular payer?</td>
+                
+            </tr>
+            <tr>
+                <td>Claims/Patient</td>
+                <td>Card</td>
+		<td rowspan="2" class="qa">If there is any change in patients' requested claims and clinical interactions due to transition?</td>   
+            </tr>
+            <tr>
+                <td>Encounters/Patient</td>
+                <td>Card</td>
+                
+            </tr>
+            
+            <tr>
+                <td>Pre/post Transition by Metrics: Claim volume, Encounters, Claim Cost and Patient OOP%
+                </td>
+                <td>Table</td>
+                <td class="qa">
+                    Does the data reveals any change in claims volume, encounters, claim cost and Patient OOP% within 90 days, before or after payer transition?
+                     </br></br>
+                    Is there any evidence that patients can anticipate the cost associated with a encounter class and choose payers with more suitable policies?
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
+</body>
+</html>
